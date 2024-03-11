@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recourses/style.css">
+    <title>Cheat Sheet</title>
+</head>
+<body>
+    <!-- Here is the top of the website -->
+    <header>
+        <nav>
+            <h3>Cheat Sheet</h3>
+            <div class="anchor-wrapper">
+                <a href="#css-selectors"><p>CSS selectors</p></a>
+                <a href="#css-specificity"><p>CSS specificity</p></a>
+            </div>
+        </nav>
+        <h1>CSS selectors <br> specificity</h1>
+    </header>
+
+    <!-- Here the main section begins -->
+    <main>
+        <section class="css-selectors" id="css-selectors">
+            <h2 id="">CSS selectors</h2>
+            <article> <!-- Here the first table begins -->
+                <table>
+                    <tr>
+                        <th>Types of selectors</th>
+                        <th>Example</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Type selectors</td>
+                        <td class="first-two-td code">h1</td>
+                        <td>Type selectors target an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Class selectors</td>
+                        <td class="first-two-td code">.example-container</td>
+                        <td>Class selectors target an element or multiple element's that have a specific value for their class attributes</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">ID-selectors</td>
+                        <td class="first-two-td code">#first-heading</td>
+                        <td>ID selectors target an element that has a specific value for its id attribute</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Attribute selectors</td>
+                        <td class="first-two-td code">img[alt]</td>
+                        <td>This group of selectors gives you different ways to select elements based on the presence of a certain attribute within an HTML element</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Attribute + value selectors</td>
+                        <td class="first-two-td code">img[alt="grizzly-bear"]</td>
+                        <td>You can also make a selection based on the value which has been set within the specific attribute, allowing for a more precise selection</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Pseudo-class selectors</td>
+                        <td class="first-two-td code">a:hover</td>
+                        <td>These group of selectors style certain states of an element. The :hover pseudo-class selects an element only when it is being hovered over by the mouse pointer</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Universal selector</td>
+                        <td class="first-two-td code">*</td>
+                        <td>This target will select all HTML elements on the page</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Grouping selectors</td>
+                        <td class="first-two-td code">h1, h2, p</td>
+                        <td>Instead of making multiple rulesets for different elements with the same containing the same declarations, you can merge all the selectors into a group selector. This is a more effective way for applying the same style on the desired elements</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Chain selectors</td>
+                        <td class="first-two-td code">p.intro</td>
+                        <td>If you want to only target &lt;p&gt; elements with certain classes for example, you can do so with chain selectors. These selectors will narrow down your selection as precise as desired and only apply the style to the elements that match all criteria within the selector</td>
+                    </tr>
+                </table>
+            </article>
+            <aside>
+                <p>As you become more proficient in CSS, you'll discover a wide array of advanced selectors that allow you to target specific elements with greater precision and flexibility. These advanced selectors go beyond basic element, class, and ID selectors, offering powerful tools to style your web pages more efficiently. <br><br>
+                
+                Advanced selectors enable you to target elements based on their position, relationship with other elements, attributes, and even their content. By mastering these selectors, you can create more complex and dynamic styles while writing cleaner and more maintainable CSS code.</p>
+            </aside>
+        </section>
+        <section id="css-specificity">
+            <h2>CSS specificity</h2>
+            <article> <!-- Here the second table begins -->
+                <table>
+                    <tr>
+                        <th>Types of selectors</th>
+                        <th>Example</th>
+                        <th>Specificity Value</th>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">ID-selectors</td>
+                        <td class="first-two-td code">#first-heading</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Class- attribute- and pseudo-class selectors</td>
+                        <td class="first-two-td code">.box, img[alt], .box:hover</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Elements and pseudo-elements</td>
+                        <td class="first-two-td code">p, button:hover</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="first-two-td">Universal selector and inherited styling</td>
+                        <td class="first-two-td code">*, p style from body ruleset</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </article>
+            <aside>
+                <p>
+                    CSS specificity is the mechanism by which browsers decide which CSS rules should take precedence when multiple rules apply to the same element. Specificity is calculated based on the types of selectors used in a CSS rule.</p>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>
